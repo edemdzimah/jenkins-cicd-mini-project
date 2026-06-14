@@ -4,12 +4,17 @@ Run locally with:  pytest -v
 These same tests run automatically in the Jenkins `Test` stage.
 """
 
-from app import add, app
+from app import add, subtract, app
 
 
 def test_add():
     assert add(2, 3) == 5
     assert add(-1, 1) == 0
+
+
+def test_subtract():
+    assert subtract(5, 3) == 2
+    assert subtract(10, 4) == 6
 
 
 def test_home_route():
